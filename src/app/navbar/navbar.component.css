@@ -1,0 +1,33 @@
+.navigation{
+    display: flex;
+    flex-direction: row;
+    padding: 15px ;
+    background-image: linear-gradient(7deg,#072435, #13547ac5);
+}
+
+.spacer{
+    flex: auto;
+}
+
+.active {
+    color: white;
+    font-weight: 600;
+}
+
+a{
+    color: orange;
+    font-weight: 500;
+    padding-right: 1rem;
+}
+a:hover{
+    color: rgba(245, 245, 245, 0.795);
+}
+a:link {
+    text-decoration: none;
+}
+
+.imgbtn{
+    width: 22px;
+    height: 22px;
+}
+      
