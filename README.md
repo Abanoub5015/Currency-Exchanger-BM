@@ -1,27 +1,110 @@
 # CEx
+# Currency-Exchanger By Abanoub Magdy
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.2.
+### Currency-Exchanger made by (Angular) front-end using Single Page Application(SPA) technology. Along with some styling. 
+In total 
+* 6 components
+* 2 services 
+* (api) that help us to feed the whole project.
+#### also using the app-routing Module to be easy to navigate between components using URLs of each component
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+# About The Project 
+## [Demo]
+| [![]()]() | [![]()]() | 
+|:---:|:---:|
+| **Home**  | **Details**  |
+| [![](https://github-production-user-asset-6210df.s3.amazonaws.com/82307701/241774496-d8b075b7-cf10-4f8f-a801-3c3744bc5fa2.png)](https://abanoub5015.github.io/Currency-Exchanger-BM/) | [![](https://github-production-user-asset-6210df.s3.amazonaws.com/82307701/241774740-83a5c67f-ea80-4fbf-8423-dc7945e75f11.png)](https://abanoub5015.github.io/Currency-Exchanger-BM/) |
 
-## Code scaffolding
+👉🏻[Here's the website [Currency-Exchanger]](https://abanoub5015.github.io/Currency-Exchanger-BM/)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## [Pages]
 
-## Build
+* **Home [Currency-Exchanger]** <br/>💡Exchange Currency💡
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+* **Details** <br/>💡[by clicking on (More Details) ... you will navigate to (Detail page directly that shows currency rate💡
 
-## Running unit tests
+* **404 page** <br/>💡[when user enter wrong url inside the website domain.. using(wild card to navigate from incorrect route)💡
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## [Built With]
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+* [![Angular][Angular.io]][Angular-url]
+* 2.Utilize  CSS for styling also the app is responsive(mobile/Desktop)
 
-## Further help
+<!-- download -->
+## [Download And installation]
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Download this template from [Github](https://github.com/Abanoub5015/Currency-Exchanger-BM/archive/refs/heads/main.zip)
+
+
+* Install dependencies
+```
+npm install
+```
+* Run locally
+```
+ng serve
+```
+
+
+* ## other Commands
+```
+npm install --save-dev typescript     
+npm install --save-dev @angular/language-service
+npm install -g @angular/cli 
+ng --version 
+  
+ng g c components/PageNotFound   
+  ng help 
+  ng serve --port 3000 
+  ng serve --open       
+```
+
+* ## for cleaning & fix Commands
+```
+ng cache clean 
+npm config set legacy-peer-deps true  
+```
+
+* ## 1.git Commands [// means once]
+```
+//git init 
+//git add README.md  
+  git add *
+  git commit -m "publish project"  
+//git branch -m main 
+//git remote add origin https://github.com/Abanoub5015/Currency-Exchanger-BM.git
+  git push origin main
+git pull origin main 
+```
+
+* ## 2.git (deploy-page) Commands [// means once]
+```
+[1] //npm i -g angular-cli-ghpages
+[2] ng build 
+[3] ngh --dir dist/my-store ->[for deploy]
+```
+
+
+* ## 3.after every update:
+```
+-----------------------------
+git add *
+git commit -m "update commit"
+git push origin main
+
+ng build
+ngh --dir dist/my-store ->[for deploy]
+-----------------------------
+```
+
+
+
+
+[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
+[Angular-url]: https://angular.io/
+[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
+[Bootstrap-url]: https://getbootstrap.com
+[angular/flex-layout]: https://github.com/angular/flex-layout
+

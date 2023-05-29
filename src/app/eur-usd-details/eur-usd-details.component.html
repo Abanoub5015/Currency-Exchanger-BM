@@ -1,0 +1,46 @@
+<a routerLink="/">⬅️ back to Home</a>
+<p style="color: white;"> EUR-USD Details</p>
+<div>
+    <p style="color: white;" ngDefaultControl [(ngModel)]="title" id="title">EUR - European Union Euro €</p>
+</div>
+
+
+<div style="display: flex; height: 350px; justify-content: center; align-items: center;">
+    <div class="container">
+        <div class="select_container">
+
+            <input placeholder="Amount" ngDefaultControl [(ngModel)]="amount" id="amount" type="number" min="0">
+
+            <p>From</p>
+            <select #CA [(ngModel)]="A1" id="A1" (mouseleave)="changeA(CA.value)" disabled>
+                <option> {{A1}} </option>
+            </select>
+
+            <button class="imgbtn_swap" (click)="swap()"><img src="https://i.imgur.com/payNHfe.png'"
+                    alt="Image"></button>
+
+            <p>to</p>
+            <select #CB [(ngModel)]="B2" id="B2" (mouseleave)="changeB(CB.value)" disabled>
+                <option> {{B2}} </option>
+            </select>
+
+
+
+            <button (click)="convert()" [disabled]="amount === 0">Convert</button>
+
+
+
+        </div>
+
+        <div class="result_container">
+            <p>{{amount}} {{A1}} = {{result}} {{B2}}</p>
+        </div>
+
+
+    </div>
+</div>
+
+<div id="chart-wrapper">
+    <canvas  style="height:40vh; width:80vw" class="chart" id="canvas">{{chart}}</canvas>
+</div>
+

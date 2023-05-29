@@ -1,11 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CRatesApiService } from '../services/c-rates-api.service';
 import { Router } from '@angular/router';
-
 import { Subscription } from 'rxjs';
-
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Currency } from '../Currency';
 import { CExDetailsService } from '../services/c-ex-details.service';
 
 
@@ -41,12 +38,12 @@ export class CurrencyExchangerComponent implements OnInit {
 
   changeA(A: string) {
     this.A1 = A;
-    console.log(this.A1);
+    //console.log(this.A1);
     //this.result='';
   }
   changeB(B: string) {
     this.B2 = B;
-    console.log(this.B2);
+    //console.log(this.B2);
     //this.result='';
   }
 
@@ -93,39 +90,39 @@ export class CurrencyExchangerComponent implements OnInit {
 
       if(this.c1 == '')
       {
-        this.c1 = this.amount + " " + this.A1 + " = " + this.result + this.B2;
+        this.c1 = this.amount + " " + this.A1 + " = " + this.result + ' ' + this.B2;
       }
       else if(this.c1 != '' && this.c2 == '')
       {
-        this.c2 = this.amount + " " + this.A1 + " = " + this.result + this.B2;
+        this.c2 = this.amount + " " + this.A1 + " = " + this.result  + ' ' + this.B2;
       }
       else if(this.c2 != ''  && this.c3 == '')
       {
-        this.c3 = this.amount + " " + this.A1 + " = " + this.result + this.B2;
+        this.c3 = this.amount + " " + this.A1 + " = " + this.result + ' ' + this.B2;
       }
       else if(this.c3  != '' && this.c4 == '')
       {
-        this.c4 = this.amount + " " + this.A1 + " = " + this.result + this.B2;
+        this.c4 = this.amount + " " + this.A1 + " = " + this.result + ' ' + this.B2;
       }
       else if(this.c4  != '' && this.c5 == '')
       {
-        this.c5 = this.amount + " " + this.A1 + " = " + this.result + this.B2;
+        this.c5 = this.amount + " " + this.A1 + " = " + this.result  + ' ' + this.B2;
       }
       else if(this.c5  != '' && this.c6 == '')
       {
-        this.c6 = this.amount + " " + this.A1 + " = " + this.result + this.B2;
+        this.c6 = this.amount + " " + this.A1 + " = " + this.result  + ' ' + this.B2;
       }
       else if(this.c6  != '' && this.c7 == '')
       {
-        this.c7 = this.amount + " " + this.A1 + " = " + this.result + this.B2;
+        this.c7 = this.amount + " " + this.A1 + " = " + this.result  + ' ' + this.B2;
       }
       else if(this.c7  != '' && this.c8 == '')
       {
-        this.c8 = this.amount + " " + this.A1 + " = " + this.result + this.B2;
+        this.c8 = this.amount + " " + this.A1 + " = " + this.result  + ' ' + this.B2;
       }
       else if(this.c8  != '')
       {
-        this.c9 = this.amount + " " + this.A1 + " = " + this.result + this.B2;
+        this.c9 = this.amount + " " + this.A1 + " = " + this.result  + ' ' + this.B2;
       }
   
     })
@@ -164,8 +161,6 @@ export class CurrencyExchangerComponent implements OnInit {
     if (this.B2 == 'EUR') {
       this.result = this.cJson.rates.EUR * (this.amount);
     }
-
-    
     if (this.B2 == 'GBP') {
       this.result = this.cJson.rates.GBP  * (this.amount);
     }
@@ -312,9 +307,6 @@ export class CurrencyExchangerComponent implements OnInit {
     if (this.B2 == 'FKP') {
       this.result = this.cJson.rates.FKP * (this.amount);
     }
-
-
-
     if (this.B2 == 'GEL') {
       this.result = this.cJson.rates.GEL  * (this.amount);
     }
@@ -674,8 +666,6 @@ export class CurrencyExchangerComponent implements OnInit {
     }
 
 
-
-
    //**********************************************************************
 
     if (this.A1 == 'USD' && this.B2 == 'EGP') {
@@ -684,21 +674,33 @@ export class CurrencyExchangerComponent implements OnInit {
     if (this.A1 == 'USD' && this.B2 == 'EUR') {
       this.result = (this.cJson.rates.EUR /this.cJson.rates.USD)  * (this.amount);
     }
+    if (this.A1 == 'USD' && this.B2 == 'GBP') {
+      this.result = (this.cJson.rates.GBP /this.cJson.rates.USD)  * (this.amount);
+    }
+
     if (this.A1 == 'EGP' && this.B2 == 'USD') {
       this.result = (this.cJson.rates.USD/this.cJson.rates.EGP)  * (this.amount);
     }
     if (this.A1 == 'EGP' && this.B2 == 'EUR') {
       this.result = (this.cJson.rates.EUR/this.cJson.rates.EGP)  * (this.amount);
     }
+    if (this.A1 == 'EGP' && this.B2 == 'GBP') {
+      this.result = (this.cJson.rates.GBP/this.cJson.rates.EGP)  * (this.amount);
+    }
+
+    if (this.A1 == 'GBP' && this.B2 == 'USD') {
+      this.result = (this.cJson.rates.USD/this.cJson.rates.GBP)  * (this.amount);
+    }
+    if (this.A1 == 'GBP' && this.B2 == 'EUR') {
+      this.result = (this.cJson.rates.EUR/this.cJson.rates.GBP)  * (this.amount);
+    }
+    if (this.A1 == 'GBP' && this.B2 == 'EGP') {
+      this.result = (this.cJson.rates.EGP/this.cJson.rates.GBP)  * (this.amount);
+    }
+
    /*  if (this.A1 == 'EUR') {
       this.result = (1/this.cJson.rates.EUR) * (this.amount);
     } */
-
-    
-    if (this.A1 == 'GBP') {
-      this.result = (1/this.cJson.rates.GBP)  * (this.amount);
-    }
-
 
     if (this.A1 == 'AED') {
       this.result = (1/this.cJson.rates.AED)  * (this.amount);

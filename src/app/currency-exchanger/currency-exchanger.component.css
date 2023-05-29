@@ -21,9 +21,11 @@ select{
 
 .select_container{
     display: flex;
+    flex-wrap: wrap;  
     justify-content: space-evenly;
     width: 100%;
     align-items: center;
+    padding: 18px;
 }
 
 .select_container p{
@@ -57,13 +59,14 @@ button:disabled{
 
 .result_container{
     display: flex;
-    padding: 5px;
+    padding: 3px;
     background: firebrick;
     width: 300px;
     border-radius: 12px;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    margin: 10px;
 }
 .result_container p{
     color: white;

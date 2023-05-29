@@ -30,7 +30,7 @@
             <p>{{amount}} {{A1}} = {{result}} {{B2}}</p>
         </div>
 
-        <button (click)="moreDetails()">More Details</button>
+        <button (click)="moreDetails()" [disabled]="A1 !== 'EUR'">More Details</button>
     </div>
 
     

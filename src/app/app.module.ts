@@ -13,6 +13,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { CurrencyExchangeDetailsComponent } from './currency-exchange-details/currency-exchange-details.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EURUSDDetailsComponent } from './eur-usd-details/eur-usd-details.component';
+import { EURGBPDetailsComponent } from './eur-gbp-details/eur-gbp-details.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     NavbarComponent,
     CurrencyExchangerComponent,
     PageNotFoundComponent,
-    CurrencyExchangeDetailsComponent
+    CurrencyExchangeDetailsComponent,
+    EURUSDDetailsComponent,
+    EURGBPDetailsComponent
   ],
   imports: [
     BrowserModule,
