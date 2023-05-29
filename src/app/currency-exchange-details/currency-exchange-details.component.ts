@@ -24,6 +24,9 @@ export class CurrencyExchangeDetailsComponent {
   chart: any = [];
 
   USD = [1.077319, 1.047735, 1.022547, 1.002471, 0.980478, 0.995406, 1.042372, 1.072673, 1.084945, 1.057686, 1.090441, 1.101055];
+  isEGP: boolean = false;
+  EGPRate = [19.971826, 19.699614, 19.334419, 19.303371, 19.156632, 23.901395, 25.590973, 26.498572, 32.778137, 32.39916, 33.384467, 34.058154];
+
   value: any;
 
   A1 = 'EUR';
@@ -54,6 +57,8 @@ export class CurrencyExchangeDetailsComponent {
 
     this.fulltitle_f();
 
+ 
+
     this.subscription_to_destroy = this.c.getCurrencyRates().subscribe(response => { //Subcribe to observable [in ProductService] (to get response (stream of data)) 
       this.cJson = response;
       for (var key in this.cJson.rates) {
@@ -67,7 +72,7 @@ export class CurrencyExchangeDetailsComponent {
       this.chart = response;
       for (var key in this.cJson.rates) {
 
-        this.currencies.push(key);
+     /*    this.currencies.push(key);
         this.c_name_chart = key;
         //console.log(key);
 
@@ -75,34 +80,13 @@ export class CurrencyExchangeDetailsComponent {
         this.currencies.push(this.value);
         this.c_price_chart = this.value;
         //console.log(this.value);
-
+ */
 
       }
 
 
       //show chart data
-      this.chart = new Chart('canvas', {
-        type: 'line',
-        data: {
-          labels: [5.22, 6.22, 7.22, 8.22, 9.22, 10.22, 11.22, 12.22, 1.23, 2.23, 3.23, 4.23],
-          datasets: [
-            {
-              label: 'currency rate',
-              data: this.USD,
-              borderWidth: 3,
-              fill: true,
-              backgroundColor: 'rgba(93,175,89,0.1)',
-              borderColor: '#3e95cd'
-            }
-          ]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          aspectRatio: 3, //(width/height)
-        }
-      })
-
+      this.chart_Data();
       /*   this.c_price_chart = value;
          this.c_name_chart = this.chart.map((rates: any) => { rates.key });
          console.log(this.chart);
@@ -116,6 +100,30 @@ export class CurrencyExchangeDetailsComponent {
 
   }
 
+  chart_Data(){
+    this.chart = new Chart('canvas', {
+      type: 'line',
+      data: {
+        labels: [5.22, 6.22, 7.22, 8.22, 9.22, 10.22, 11.22, 12.22, 1.23, 2.23, 3.23, 4.23],
+        datasets: [
+          {
+            label: 'currency rate',
+            data: this.isEGP ? this.EGPRate : this.USD,
+            borderWidth: 3,
+            fill: true,
+            backgroundColor: 'rgba(93,175,89,0.1)',
+            borderColor: '#3e95cd'
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        aspectRatio: 3, //(width/height)
+      }
+    })
+  
+  }
 
 
    //convert btn[event]
@@ -126,6 +134,22 @@ export class CurrencyExchangeDetailsComponent {
       console.log(this.cJson);
 
       this.convertA1_B2();
+
+      if(this.B2 == 'EGP')
+      {
+        this.isEGP = true;
+        this.chart.destroy();
+        this.chart_Data();
+      }
+
+      
+      if(this.B2 == 'USD')
+      {
+        this.isEGP = false;
+        this.chart.destroy();
+        this.chart_Data();
+      }
+    
   
     })
 

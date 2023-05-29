@@ -22,7 +22,7 @@ export class EURGBPDetailsComponent {
   c_name_chart: any;
   chart: any = [];
 
-  USD = [1.077319, 1.047735, 1.022547, 1.002471, 0.980478, 0.995406, 1.042372, 1.072673, 1.084945, 1.057686, 1.090441, 1.101055];
+  GBP = [0.851315, 0.86161, 0.838897, 0.865567, 0.879353, 0.862095, 0.862944, 0.886653, 0.88232, 0.879017, 0.880646, 0.876841];
   value: any;
 
   A1 = 'EUR';
@@ -88,7 +88,7 @@ export class EURGBPDetailsComponent {
           datasets: [
             {
               label: 'currency rate',
-              data: this.USD,
+              data: this.GBP,
               borderWidth: 3,
               fill: true,
               backgroundColor: 'rgba(93,175,89,0.1)',
