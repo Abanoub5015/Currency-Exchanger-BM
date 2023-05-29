@@ -83,7 +83,7 @@ git pull origin main
 ```
 [1] //npm i -g angular-cli-ghpages
 [2] ng build 
-[3] ngh --dir dist/my-store ->[for deploy]
+[3] ngh --dir dist/c_ex ->[for deploy]
 ```
 
 
@@ -95,7 +95,7 @@ git commit -m "update commit"
 git push origin main
 
 ng build
-ngh --dir dist/my-store ->[for deploy]
+ngh --dir dist/c_ex ->[for deploy]
 -----------------------------
 ```
 
@@ -104,7 +104,4 @@ ngh --dir dist/my-store ->[for deploy]
 
 [Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
 [Angular-url]: https://angular.io/
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
-[angular/flex-layout]: https://github.com/angular/flex-layout
 
