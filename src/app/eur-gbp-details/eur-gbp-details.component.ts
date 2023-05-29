@@ -67,7 +67,7 @@ export class EURGBPDetailsComponent {
       this.chart = response;
       for (var key in this.cJson.rates) {
 
-        this.currencies.push(key);
+     /*    this.currencies.push(key);
         this.c_name_chart = key;
         //console.log(key);
 
@@ -75,7 +75,7 @@ export class EURGBPDetailsComponent {
         this.currencies.push(this.value);
         this.c_price_chart = this.value;
         //console.log(this.value);
-
+ */
 
       }
 
