@@ -5,11 +5,12 @@
 In total 
 * 6 components
 * 2 services 
-* (api) that help us to feed the whole project.
+* (api) that help us to feed the whole project -> [tip:💡You have to run the app on (http) instead of (https) to work correctly 💡]  
 #### also using the app-routing Module to be easy to navigate between components using URLs of each component
 
 
 # About The Project 
+### again Do Not forget [the app will only run on http:💡so you have to run the app on (http) instead of (https) to work correctly 💡]  
 ## [Demo]
 | [![]()]() | [![]()]() | 
 |:---:|:---:|
