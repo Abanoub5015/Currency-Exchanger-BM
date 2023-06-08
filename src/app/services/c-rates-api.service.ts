@@ -26,13 +26,13 @@ export class CRatesApiService {
 
   getCurrencyRates(): Observable<Currency[]>  // (<>) means (type assertion)
   {
-    let url = 'http://data.fixer.io/api/latest?access_key=42354f9b0756727ca410792f3378783a';
+    let url = 'http://data.fixer.io/api/latest?access_key=7b00c6a205a044c021b288aab77562d0';
     return this.http.get<Currency[]>(url);
   }
 
   /*   getCurrencyRates()
     {
-      let url = 'http://data.fixer.io/api/latest?access_key=42354f9b0756727ca410792f3378783a';
+      let url = 'http://data.fixer.io/api/latest?access_key=7b00c6a205a044c021b288aab77562d0';
       return this.http.get(url);
     } */
 
@@ -40,7 +40,7 @@ export class CRatesApiService {
   getCurrencyhistorical(date: any, B2:any): Observable<any> {
     //this.B2 = this.CExDetailsService.getgetc_exDetails2();
 
-    this.url = 'http://data.fixer.io/api/' + date + '?access_key=42354f9b0756727ca410792f3378783a&symbols=' + B2;
+    this.url = 'http://data.fixer.io/api/' + date + '?access_key=7b00c6a205a044c021b288aab77562d0&symbols=' + B2;
     return this.http.get<any>(this.url)
   }
 
@@ -54,7 +54,7 @@ export class CRatesApiService {
 
     var i = 0;
     for (i = 0; i <= date.length; i++) {
-      this.url = 'http://data.fixer.io/api/' + date[i] + '?access_key=42354f9b0756727ca410792f3378783a&symbols=' + this.B2;
+      this.url = 'http://data.fixer.io/api/' + date[i] + '?access_key=7b00c6a205a044c021b288aab77562d0&symbols=' + this.B2;
       this.http.get<any>(this.url).subscribe(Currencyhistorical_Object => {
         //this.chartList.push(Currencyhistorical_Object)
 
