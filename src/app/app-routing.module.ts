@@ -13,8 +13,8 @@ const routes: Routes = [
   {path: 'EUR-USD_Details', component: EURUSDDetailsComponent},
   {path: 'EUR-GBP_Details', component: EURGBPDetailsComponent },
 
-   //{path: '**', redirectTo: '/'}, // wild card (redirectTo homepage automatically)
-   {path: '**',  component: PageNotFoundComponent}, // wild card (with 404-page)
+   {path: '**', redirectTo: '/'}, // wild card (redirectTo homepage automatically)
+   //{path: '**',  component: PageNotFoundComponent}, // wild card (with 404-page)
 ];
 
 @NgModule({
