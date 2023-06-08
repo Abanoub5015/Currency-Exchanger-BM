@@ -3,3 +3,32 @@ img {
     margin-left: auto;
     margin-right: auto;
 }
+
+a {
+    font-size: 22px;
+}
+
+a:link {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+
+a:visited {
+    color: rgb(56, 167, 182);
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a:active {
+    color: peru;
+    background-color: transparent;
+    text-decoration: underline;
+}
